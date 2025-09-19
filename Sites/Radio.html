@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rádio Anime Hits</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://4kwallpapers.com/images/walls/thumbs_3t/23247.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: rgba(0,0,0,0.7);
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      gap: 30px;
+    }
+
+    .player, .playlist, .contact {
+      background: rgba(0,0,0,0.7);
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    .player h2, .playlist h2, .contact h2 {
+      margin-bottom: 10px;
+      color: #ff4757;
+    }
+
+    .player audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .playlist ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .playlist li {
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .playlist li:hover {
+      color: #ffadad;
+    }
+
+    .contact p {
+      margin: 5px 0;
+    }
+
+    .scroll-btn {
+      position: fixed;
+      right: 20px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    #scrollTop { bottom: 70px; }
+    #scrollBottom { bottom: 20px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Rádio Anime Hits</h1>
+    <p>Transmitindo os maiores sucessos de anime todos os dias!</p>
+  </header>
+
+  <main>
+
+    <div class="player">
+      <h2>Player</h2>
+      <audio id="radioPlayer" controls>
+        <source src="arquivo.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+      </audio>
+    </div>
+
+    <div class="playlist">
+      <h2>Programação do Dia</h2>
+      <ul id="playlist">
+        <li data-src="arquivo.mp3">08:00 - Coração de Criança - Dragon Ball GT</li>
+        <li data-src="arquivo.mp3">09:00 - Memories - One Piece</li>
+        <li data-src="arquivo.mp3">10:00 - Temos que Pegar - Pokémon</li>
+        <li data-src="arquivo.mp3">11:00 - Pegasus Fantasy - Cavaleiros do Zodíaco</li>
+        <li data-src="arquivo.mp3">12:00 - Butter-Fly - Digimon Adventure</li>
+        <li data-src="arquivo.mp3">13:00 - Cha-La Head-Cha-La - Dragon Ball Z</li>
+        <li data-src="arquivo.mp3">14:00 - Tank! - Cowboy Bebop</li>
+        <li data-src="arquivo.mp3">15:00 - God Knows - Suzumiya Haruhi</li>
+        <li data-src="arquivo.mp3">16:00 - A Cruel Angel's Thesis - Evangelion</li>
+        <li data-src="arquivo.mp3">17:00 - Again - Fullmetal Alchemist: Brotherhood</li>
+      </ul>
+    </div>
+
+    <div class="contact">
+      <h2>Contato</h2>
+      <p>Email: contato@radioanimehits.com.br</p>
+      <p>Telefone: (83) 1234-5678</p>
+      <p>Endereço: Rua Anime, 123 - João Pessoa PB</p>
+    </div>
+  </main>
+
+  <button id="scrollTop" class="scroll-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">Subir</button>
+  <button id="scrollBottom" class="scroll-btn" onclick="window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'})">Descer</button>
+
+  <script>
+    const player = document.getElementById('radioPlayer');
+    const playlist = document.getElementById('playlist');
+
+    playlist.addEventListener('click', function(e){
+      if(e.target && e.target.nodeName === "LI"){
+        const src = e.target.getAttribute('data-src');
+        player.src = src;
+        player.play();
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fórum de Genshin Impact</title>
+  <style>
+    :root {
+      --accent: #ff4757;
+      --text: #2f3542;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: url('https://cdn.selectgame.net/wp-content/uploads/2023/10/Genshin-Impact-Wallpaper-Full-HD-Stars-Shining-Depths-01.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text);
+    }
+
+    header {
+      background: url('https://cdn.ome.lt/K5KRqohjm7fi_2GWGUH7r1W_DHk=/970x360/smart/uploads/conteudo/fotos/genshin-impact-patch-2.8.jpg') no-repeat top center;
+      background-size: cover;
+      padding: 50px 20px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+
+    .container {
+      display: flex;
+      margin: 20px;
+    }
+
+    nav {
+      width: 200px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 15px;
+      border-radius: 8px;
+      margin-right: 20px;
+      height: fit-content;
+      backdrop-filter: blur(4px);
+    }
+
+    nav h3 {
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav li {
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    nav img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    main {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      backdrop-filter: blur(4px);
+    }
+
+    .login-box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .login-box h2 {
+      margin-bottom: 10px;
+    }
+
+    .login-box input {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .login-box button {
+      background: var(--accent);
+      border: none;
+      padding: 10px;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .login-box button:hover {
+      background: #e84118;
+    }
+
+    .forum-content {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .forum-row {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .intro {
+      flex: 1;
+      background: rgba(255,255,255,0.8);
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .intro h2 {
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    .intro p {
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .character-photo {
+      width: 200px;
+      height: 300px;
+      background: url('https://upload.wikimedia.org/wikipedia/en/5/56/Furina_%28Genshin_Impact%29.png') no-repeat center center;
+      background-size: contain;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .comments h2 {
+      margin-bottom: 10px;
+    }
+
+    .comment-form textarea {
+      width: 100%;
+      height: 80px;
+      margin-bottom: 10px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .comment-form button {
+      background: var(--accent);
+      border: none;
+      padding: 8px 12px;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .comment-form button:hover {
+      background: #e84118;
+    }
+
+    .comment-list {
+      margin-top: 20px;
+    }
+
+    .comment {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .comment strong {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Fórum de Genshin Impact</h1>
+    <p>Bem-vindo ao fórum oficial de Genshin Impact!</p>
+  </header>
+
+  <div class="container">
+    <nav>
+      <h3>Seções</h3>
+      <ul>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Notícias"> <a href="#">Notícias</a></li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/929/929417.png" alt="Guias"> <a href="#">Guias de Personagens</a></li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/1041/1041871.png" alt="Builds"> <a href="#">Builds</a></li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/1000/1000996.png" alt="Coop"> <a href="#">Coop & Eventos</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="login-box">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Usuário">
+        <input type="password" id="password" placeholder="Senha">
+        <button onclick="login()">Entrar</button>
+      </div>
+
+      <div class="forum-content" id="forum">
+        <div class="forum-row">
+          <div class="character-photo"></div>
+          <div class="intro">
+            <h2>Bem-vindo ao Fórum!</h2>
+            <p>Este espaço é para você compartilhar dicas, guias e experiências sobre Genshin Impact.</p>
+          </div>
+        </div>
+
+        <h2>Comentários</h2>
+        <div class="comment-form">
+          <textarea id="commentText" placeholder="Escreva seu comentário..."></textarea>
+          <button onclick="addComment()">Postar</button>
+        </div>
+        <div class="comment-list" id="commentList"></div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value.trim();
+      const pass = document.getElementById("password").value.trim();
+      if(user && pass){
+        document.querySelector(".login-box").style.display = "none";
+        document.getElementById("forum").style.display = "flex";
+        alert("Bem-vindo ao fórum, " + user + "!");
+      } else {
+        alert("Preencha usuário e senha!");
+      }
+    }
+
+    function addComment(){
+      const text = document.getElementById("commentText").value.trim();
+      if(text){
+        const commentList = document.getElementById("commentList");
+        const div = document.createElement("div");
+        div.className = "comment";
+        div.innerHTML = "<strong>Usuário:</strong> " + text;
+        commentList.prepend(div);
+        document.getElementById("commentText").value = "";
+      } else {
+        alert("Digite um comentário antes de postar.");
+      }
+    }
+  </script>
+
+</body>
+</html>
